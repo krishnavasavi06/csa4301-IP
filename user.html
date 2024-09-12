@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Voting Portal</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <div class="header">
+        <h1>User Voting Portal</h1>
+        <p>Please enter your Voter ID and verify OTP to cast your vote.</p>
+    </div>
+
+    <div class="container">
+        <div class="login-section" id="loginSection">
+            <input type="text" id="voterID" placeholder="Enter Voter ID">
+            <button onclick="generateOTP()">Get OTP</button>
+            <input type="text" id="otp" placeholder="Enter OTP">
+            <button onclick="verifyOTP()">Verify OTP & Proceed</button>
+        </div>
+
+        <div class="vote-section" id="voteSection" style="display: none;">
+            <h2>Select Your Candidate</h2>
+            <div class="candidate-list">
+                <div class="candidate-item">
+                    <input type="radio" id="candidate1" name="candidate" value="JANASENA">
+                    <label for="candidate1">
+                        <img src="../images/janasena.jpeg" alt="JANASENA">
+                        JANASENA
+                    </label>
+                </div>
+                <div class="candidate-item">
+                    <input type="radio" id="candidate2" name="candidate" value="CONGRESS PARTY">
+                    <label for="candidate2">
+                        <img src="../images/congress.png" alt="CONGRESS PARTY">
+                        CONGRESS PARTY
+                    </label>
+                </div>
+                <div class="candidate-item">
+                    <input type="radio" id="candidate3" name="candidate" value="BJP">
+                    <label for="candidate3">
+                        <img src="../images/bjp.jpeg" alt="BJP">
+                        BJP
+                    </label>
+                </div>
+                <div class="candidate-item">
+                    <input type="radio" id="candidate4" name="candidate" value="TELUGU DESAM">
+                    <label for="candidate4">
+                        <img src="../images/tdp.jpeg" alt="TELUGU DESAM">
+                        TELUGU DESAM
+                    </label>
+                </div>
+            </div>
+            <button onclick="submitVote()">Submit Vote</button>
+        </div>
+
+        <div class="thank-you-section" id="thankYouSection" style="display: none;">
+            <h1>Thank You for Voting!</h1>
+        </div>
+    </div>
+
+    <script src="user.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Admin Dashboard</h1>
+        <p>Manage the election process from here.</p>
+    </div>
+
+    <div class="container">
+        <button onclick="createCandidate()">Create Election Candidate</button>
+        <button onclick="allocateData()">Allocate Election Data</button>
+        <button onclick="createVoterList()">Create Voter List</button>
+        <button onclick="importVoterList()">Import Voter List</button>
+        <button onclick="viewVoterList()">View & Update Voter List</button>
+        <button onclick="getResults()">View Election Results</button>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
